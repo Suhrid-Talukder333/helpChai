@@ -1,16 +1,20 @@
 import { GlobeAltIcon } from '@heroicons/react/24/outline';
 import { lusitana } from '@/app/ui/fonts';
+import Image from 'next/image';
 //import '@/app/ui/logo.css'
 
 export default function Logo() {
   return (
     <div
-      className={`${lusitana.className} flex flex-row items-center justify-center leading-none text-white relative`}
+      className={`${lusitana.className} relative flex flex-row items-center justify-center leading-none text-white`}
     >
-      <div className="drop-container">
-        <h1 className='logo-text text-blue-400 text-5xl'>Help_Pani</h1>
-        <div className="drop"></div>
-      </div>
+      <Image
+        src={'/helppanilogotext.png'}
+        alt={`Help Pani`}
+        className="mr-4 rounded-full"
+        width={180}
+        height={180}
+      />
     </div>
   );
 }

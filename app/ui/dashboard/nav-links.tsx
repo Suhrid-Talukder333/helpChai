@@ -1,8 +1,8 @@
 'use client';
 import {
-  UserGroupIcon,
+  SparklesIcon,
   HomeIcon,
-  DocumentDuplicateIcon,
+  BookOpenIcon,
 } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -14,9 +14,9 @@ const links = [
   {
     name: 'Learning',
     href: '/dashboard/learning',
-    icon: DocumentDuplicateIcon,
+    icon: BookOpenIcon,
   },
-  { name: 'Calculate WIQ', href: '/dashboard/calculate', icon: UserGroupIcon },
+  { name: 'Calculate WIQ', href: '/dashboard/calculate', icon: SparklesIcon },
 ];
 
 export default function NavLinks() {
