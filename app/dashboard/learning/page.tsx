@@ -30,7 +30,7 @@ export default function Page() {
             <h2 className="mb-4 text-2xl md:text-4xl font-extrabold leading-tight tracking-tight text-gray-900">
               Let Us Start
             </h2>
-            <p className="mb-6 font-light text-gray-500 md:text-lg">
+            <p style={{textAlignLast: "center"}} className="text-justify mb-6 font-light text-gray-500 md:text-lg">
               explore the intricacies of WQI parameters, may each factor unlock
               insights, fostering a deeper understanding of the delicate balance
               that shapes our water health. Ready to unravel the story behind
@@ -58,7 +58,7 @@ export default function Page() {
           </div>
           <div className="mt-4 md:mt-0">
             <h2 className="mb-4 md:text-end text-2xl md:text-4xl text-center font-extrabold tracking-tight text-gray-900 ">
-              :pH (Potential of Hydrogen)
+              pH (Potential of Hydrogen)
             </h2>
             <p className="mb-6 text-justify font-light text-gray-500 md:text-lg">
               pH measures the acidity or alkalinity of water. Ideal levels range
@@ -104,7 +104,7 @@ export default function Page() {
           </div>
           <div className="order-first mt-4 md:mt-0">
             <h2 className="mb-4 md:text-end text-center text-2xl md:text-4xl font-extrabold tracking-tight text-gray-900 ">
-              Turbidity:
+              Turbidity
             </h2>
             <p className="mb-6 text-justify font-light text-gray-500  md:text-lg">
               Turbidity measures water clarity. Clear water allows light
@@ -150,7 +150,7 @@ export default function Page() {
           </div>
           <div className="mt-4 md:mt-0">
             <h2 className="mb-4 md:text-end text-2xl md:text-4xl text-center font-extrabold tracking-tight text-gray-900 ">
-              :Conductivity/Electrical Conductivity (EC)
+              Conductivity/Electrical Conductivity (EC)
             </h2>
             <p className="mb-6 text-justify font-light text-gray-500  md:text-lg">
               EC indicates the ability of water to conduct an electric current,
@@ -198,7 +198,7 @@ export default function Page() {
           </div>
           <div className="order-first mt-4 md:mt-0">
             <h2 className="mb-4 md:text-end text-center  text-2xl md:text-4xl font-extrabold tracking-tight text-gray-900 ">
-              Total Dissolved Solids (TDS):
+              Total Dissolved Solids (TDS)
             </h2>
             <p className="mb-6 text-justify font-light text-gray-500  md:text-lg">
               TDS measures the total amount of dissolved substances, including
@@ -244,7 +244,7 @@ export default function Page() {
           </div>
           <div className="mt-4 md:mt-0">
             <h2 className="mb-4 md:text-end text-center  text-2xl md:text-4xl font-extrabold tracking-tight text-gray-900 ">
-              Total Coliform and E. coli Bacteria:
+              Total Coliform and E. coli Bacteria
             </h2>
             <p className="mb-6 text-justify font-light text-gray-500  md:text-lg">
               Presence of coliform bacteria indicates contamination from fecal

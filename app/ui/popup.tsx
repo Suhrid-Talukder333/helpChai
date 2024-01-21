@@ -24,16 +24,12 @@ const Popup = ({
             Understanding Water Quality: Read More About WQI
           </h3>
           <span
-            className={`bg-primary mx-auto mb-6 inline-block h-1 w-[90px] rounded`}
+            className={`bg-blue-500 mx-auto mb-6 inline-block h-1 w-[90px] rounded`}
           ></span>
-          <p className="text-body-color mb-10 text-base leading-relaxed text-justify">
+          <p className="text-body-color text-justify mb-10 text-base leading-relaxed text-justify">
             For a detailed understanding of how the Water Quality Index (WQI) is
             calculated and interpreted, please refer to the comprehensive
-            information available on the provided link. The WQI is a composite
-            measure that condenses multiple water quality parameters into a
-            single value. Interpretation and accuracy may vary based on local
-            standards and conditions. This link provides additional insights for
-            a more thorough comprehension.
+            information available on the provided link.
           </p>
           <div className="-mx-3 flex flex-wrap">
             <div className="w-1/2 px-3">
@@ -45,8 +41,8 @@ const Popup = ({
               </button>
             </div>
             <div className="w-1/2 px-3">
-              <button className="border-primary bg-blue-300 block w-full rounded-md border p-3 text-center text-base font-medium transition hover:bg-blue-200">
-                <Link href={`/dashboard/learning`}> Learn Details </Link>
+              <button className="border-grey-200 bg-blue-300 block w-full rounded-md border p-3 text-center text-base font-medium transition hover:bg-blue-200">
+                <Link href={`/dashboard/learning`}> Learn </Link>
               </button>
             </div>
           </div>

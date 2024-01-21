@@ -33,7 +33,7 @@ export default function Page() {
         <Carousel items={carouselItems} />
       </section>
       <div className='flex h-full w-full justify-center items-center bg-blue-400 md:p-4 mt-10'>
-        <p className='text-center text-white text-2xl md:text-3xl px-5 py-[80px] md:py-8'>
+        <p className='break-all text-justify text-white text-2xl md:text-3xl px-5 py-[80px] md:py-8'>
           <strong className='text-green-300 text-bold'>Help</strong> <strong className='text-blue-300 text-bold'>Pani</strong> is a research-driven initiative committed to closing the
           information gap between water utilities and communities regarding
           water supply and quality. With the youth at the forefront and

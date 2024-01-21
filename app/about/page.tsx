@@ -652,18 +652,17 @@ const Page = () => {
                   Empower communities with safe water solutions.
                 </h2>
                 <p className="mb-5 text-center text-justify text-base sm:text-xl md:text-start">
-                  Explore Help Pani, where we are dedicated to shaping a digital
-                  water future. Our Young Water Volunteers, assigned to Water
-                  Clubs, play a key role. Join us on our year-long journey,
-                  iterating through collaboration with users and advisors on the
-                  Help Pani app and website
+                  Discover Help Pani, dedicated to shaping a digital water
+                  future. Our Young Water Volunteers in Water Clubs are crucial
+                  contributors. Join our journey, iterating through
+                  collaboration on the Help Pani website.
                 </p>
                 <p className="mb-8 text-center text-justify text-base sm:text-xl md:text-start">
-                  Our platform is tailored for collecting, storing, and sharing
-                  drinking water supply and quality data, aligning with the
-                  ongoing doctoral research led by ICCAD. Integrating
+                  Our platform is crafted for gathering, storing, and sharing
+                  data on drinking water supply and quality, aligning with
+                  ongoing doctoral research led by ICCAD. We integrate
                   technology, social engagement, and institutional support to
-                  enhance Drinking Water Security.
+                  enhance Drinking Water Security
                 </p>
               </div>
             </div>
@@ -676,7 +675,10 @@ const Page = () => {
             <h2 className="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 md:text-4xl">
               Our team
             </h2>
-            <p className="font-light text-gray-500 sm:text-xl">
+            <p
+              style={{ textAlignLast: 'center' }}
+              className="text-justify font-light text-gray-500 sm:text-xl"
+            >
               Embark on a journey through our diverse range of dedicated persons
               in promoting safe water drinking practices.
             </p>
@@ -709,7 +711,7 @@ const Page = () => {
                           aria-hidden="true"
                         >
                           <path
-                            fill-rule="evenodd"
+                            fillRule="evenodd"
                             d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
                             clipRule="evenodd"
                           />
