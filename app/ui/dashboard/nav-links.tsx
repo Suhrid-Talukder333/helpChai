@@ -16,7 +16,7 @@ const links = [
     href: '/dashboard/learning',
     icon: BookOpenIcon,
   },
-  { name: 'Calculate WIQ', href: '/dashboard/calculate', icon: SparklesIcon },
+  { name: 'Calculate WQI', href: '/dashboard/calculate', icon: SparklesIcon },
 ];
 
 export default function NavLinks() {
@@ -30,13 +30,22 @@ export default function NavLinks() {
             key={link.name}
             href={link.href}
             className={clsx(
-              'flex h-[48px] grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-sky-100 hover:text-blue-600 md:flex-none md:justify-start md:p-2 md:px-3',
+              'flex h-[48px] grow items-center justify-center gap-2 rounded-md p-3 text-sm font-medium text-white hover:bg-sky-100 hover:text-blue-600 sm:border-2 sm:border-white md:flex-none md:justify-start md:border-none md:p-2 md:px-3',
               {
-                'bg-sky-100 text-blue-600': pathname === link.href,
+                'text-black bg-sky-100': pathname === link.href,
               },
-            )}          >
-            <LinkIcon className="w-6" />
-            <p className="hidden md:block">{link.name}</p>
+            )}
+          >
+            <LinkIcon className={clsx('w-6', {
+                'text-black': pathname === link.href,
+              })} />
+            <p
+              className={clsx('hidden md:block', {
+                'text-black': pathname === link.href,
+              })}
+            >
+              {link.name}
+            </p>
           </Link>
         );
       })}

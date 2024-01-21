@@ -1,5 +1,8 @@
+'use client';
+
 import Image from 'next/image';
 import React from 'react';
+import { TEAM_INFO } from '../lib/utils';
 
 const Page = () => {
   return (
@@ -7,10 +10,19 @@ const Page = () => {
       <section className="overflow-hidden bg-white pb-12 pt-20 lg:pb-[90px] lg:pt-[120px]">
         <div className="container mx-auto">
           <div className="-mx-4 flex flex-wrap items-center justify-between">
-            <div className="w-full px-4 lg:w-6/12">
+            <div className="aboutBackground w-full px-4 lg:w-6/12">
               <div className="-mx-3 flex items-center sm:-mx-4">
                 <div className="w-full px-3 sm:px-4 xl:w-1/2">
-                  <div className="py-3 sm:py-4">
+                  <div
+                    style={{
+                      backgroundColor: '#D9AFD9',
+                      backgroundImage:
+                        'linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%)',
+                      border: '1px solid white',
+                      borderRadius: '5px',
+                    }}
+                    className="py-3 sm:py-4"
+                  >
                     <Image
                       src="/aboutus1.png"
                       alt=""
@@ -19,7 +31,16 @@ const Page = () => {
                       height={300}
                     />
                   </div>
-                  <div className="py-3 sm:py-4">
+                  <div
+                    style={{
+                      backgroundColor: '#FBAB7E',
+                      backgroundImage:
+                        'linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%)',
+                      border: '1px solid white',
+                      borderRadius: '5px',
+                    }}
+                    className="py-3 sm:py-4"
+                  >
                     <Image
                       src="/aboutus2.png"
                       alt=""
@@ -29,7 +50,16 @@ const Page = () => {
                     />
                   </div>
                 </div>
-                <div className="w-full px-3 sm:px-4 xl:w-1/2">
+                <div
+                  style={{
+                    backgroundColor: '#FBDA61',
+                    backgroundImage:
+                      'linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%)',
+                    border: '1px solid white',
+                    borderRadius: '5px',
+                  }}
+                  className="w-full px-3 sm:px-4 xl:w-1/2"
+                >
                   <div className="relative z-10 my-4">
                     <Image
                       src="/aboutus3.png"
@@ -614,33 +644,26 @@ const Page = () => {
             </div>
 
             <div className="w-full px-4 lg:w-1/2 xl:w-5/12">
-              <div className="mt-10 lg:mt-0">
-                <span className="text-primary mb-4 block text-5xl font-semibold text-center md:text-start">
+              <div className="mt-10 p-5  lg:mt-0">
+                <span className="mb-4 block text-center text-3xl font-extrabold tracking-tight text-gray-900 md:text-start md:text-5xl">
                   About Us
                 </span>
-                <h2 className="text-center md:text-start text-dark mb-5 text-3xl font-bold text-blue-400 sm:text-[40px]/[48px]">
+                <h2 className="text-1xl text-dark mb-5 text-center font-bold text-gray-700 sm:text-[40px]/[48px] md:text-start md:text-3xl">
                   Empower communities with safe water solutions.
                 </h2>
-                <p className="mb-5 text-base text-center md:text-start sm:text-xl">
-                  Welcome to Help Pani, where the term Helping People Access
-                  Needed Information encapsulates our mission. We are dedicated
-                  to shaping a digital water future. At the heart of this
-                  research initiative are our Young Water Volunteers (YWVs),
-                  officially assigned to Water Clubs or Help Pani Clubs. Through
-                  our app and website, Help Pani, weve embarked on a year-long
-                  journey of continuous iteration, collaborating with users and
-                  advisors to bring it to this point.
+                <p className="mb-5 text-center text-justify text-base sm:text-xl md:text-start">
+                  Explore Help Pani, where we are dedicated to shaping a digital
+                  water future. Our Young Water Volunteers, assigned to Water
+                  Clubs, play a key role. Join us on our year-long journey,
+                  iterating through collaboration with users and advisors on the
+                  Help Pani app and website
                 </p>
-                <p className="mb-8 text-base text-center sm:text-xl md:text-start">
-                  Our platform is purpose-built to collect, store, transfer, and
-                  share information on drinking water supply and quality
-                  monitoring, aligning with the recommended Model of the ongoing
-                  doctoral research led by Amrita Gautam - Youth-led
-                  Participatory Sensing- YPS. The YPS Model operates within the
-                  Techno-Socio-Institutional-TSI Framework, where each component
-                  represents the integration of technology, social engagement,
-                  and institutional support, all aimed at enhancing Drinking
-                  Water Security.
+                <p className="mb-8 text-center text-justify text-base sm:text-xl md:text-start">
+                  Our platform is tailored for collecting, storing, and sharing
+                  drinking water supply and quality data, aligning with the
+                  ongoing doctoral research led by ICCAD. Integrating
+                  technology, social engagement, and institutional support to
+                  enhance Drinking Water Security.
                 </p>
               </div>
             </div>
@@ -650,7 +673,7 @@ const Page = () => {
       <section className="bg-white">
         <div className="mx-auto max-w-screen-xl px-4 py-8 text-center lg:px-6 lg:py-16">
           <div className="mx-auto mb-8 max-w-screen-sm lg:mb-16">
-            <h2 className="mb-4 text-4xl font-extrabold tracking-tight text-gray-900">
+            <h2 className="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 md:text-4xl">
               Our team
             </h2>
             <p className="font-light text-gray-500 sm:text-xl">
@@ -659,254 +682,44 @@ const Page = () => {
             </p>
           </div>
           <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-16">
-            <div className="text-center text-gray-500">
-              <Image
-                className="mx-auto mb-4 h-36 w-36 rounded-full"
-                src="/avatar.png"
-                alt="Bonnie Avatar"
-                width={100}
-                height={100}
-              />
-              <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900">
-                <a href="#">Bonnie Green</a>
-              </h3>
-              <p>Research Assistant</p>
-              <ul className="mt-4 flex justify-center space-x-4">
-                <li>
-                  <a href="#" className="text-[#39569c] hover:text-gray-900">
-                    <svg
-                      className="h-6 w-6"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                      aria-hidden="true"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div className="text-center text-gray-500">
-              <Image
-                className="mx-auto mb-4 h-36 w-36 rounded-full"
-                src="/avatar.png"
-                alt="Helene Avatar"
-                width={100}
-                height={100}
-              />
-              <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900">
-                <a href="#">Helene Engels</a>
-              </h3>
-              <p>Research Assistant</p>
-              <ul className="mt-4 flex justify-center space-x-4">
-                <li>
-                  <a href="#" className="text-[#39569c] hover:text-gray-900">
-                    <svg
-                      className="h-6 w-6"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                      aria-hidden="true"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div className="text-center text-gray-500">
-              <Image
-                className="mx-auto mb-4 h-36 w-36 rounded-full"
-                src="/avatar.png"
-                alt="Jese Avatar"
-                width={100}
-                height={100}
-              />
-              <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900">
-                <a href="#">Jese Leos</a>
-              </h3>
-              <p>Research Assistant</p>
-              <ul className="mt-4 flex justify-center space-x-4">
-                <li>
-                  <a href="#" className="text-[#39569c] hover:text-gray-900">
-                    <svg
-                      className="h-6 w-6"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                      aria-hidden="true"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div className="text-center text-gray-500">
-              <Image
-                className="mx-auto mb-4 h-36 w-36 rounded-full"
-                src="/avatar.png"
-                alt="Joseph Avatar"
-                width={100}
-                height={100}
-              />
-              <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900">
-                <a href="#">Joseph Mcfall</a>
-              </h3>
-              <p>Research Assistant</p>
-              <ul className="mt-4 flex justify-center space-x-4">
-                <li>
-                  <a href="#" className="text-[#39569c] hover:text-gray-900">
-                    <svg
-                      className="h-6 w-6"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                      aria-hidden="true"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div className="text-center text-gray-500">
-              <Image
-                className="mx-auto mb-4 h-36 w-36 rounded-full"
-                src="/avatar.png"
-                alt="Sofia Avatar"
-                width={100}
-                height={100}
-              />
-              <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900">
-                <a href="#">Lana Byrd</a>
-              </h3>
-              <p>Research Assistant</p>
-              <ul className="mt-4 flex justify-center space-x-4">
-                <li>
-                  <a href="#" className="text-[#39569c] hover:text-gray-900">
-                    <svg
-                      className="h-6 w-6"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                      aria-hidden="true"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div className="text-center text-gray-500">
-              <Image
-                className="mx-auto mb-4 h-36 w-36 rounded-full"
-                src="/avatar.png"
-                alt="Leslie Avatar"
-                width={100}
-                height={100}
-              />
-              <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900">
-                <a href="#">Leslie Livingston</a>
-              </h3>
-              <p>Research Assistant</p>
-              <ul className="mt-4 flex justify-center space-x-4">
-                <li>
-                  <a href="#" className="text-[#39569c] hover:text-gray-900">
-                    <svg
-                      className="h-6 w-6"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                      aria-hidden="true"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div className="text-center text-gray-500">
-              <Image
-                className="mx-auto mb-4 h-36 w-36 rounded-full"
-                src="/avatar.png"
-                alt="Michael Avatar"
-                width={100}
-                height={100}
-              />
-              <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900">
-                <a href="#">Michael Gough</a>
-              </h3>
-              <p>Research Assistant</p>
-              <ul className="mt-4 flex justify-center space-x-4">
-                <li>
-                  <a href="#" className="text-[#39569c] hover:text-gray-900">
-                    <svg
-                      className="h-6 w-6"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                      aria-hidden="true"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div className="text-center text-gray-500">
-              <Image
-                className="mx-auto mb-4 h-36 w-36 rounded-full"
-                src="/avatar.png"
-                alt="Neil Avatar"
-                width={100}
-                height={100}
-              />
-              <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900">
-                <a href="#">Neil Sims</a>
-              </h3>
-              <p>Research Assistant </p>
-              <ul className="mt-4 flex justify-center space-x-4">
-                <li>
-                  <a href="#" className="text-[#39569c] hover:text-gray-900">
-                    <svg
-                      className="h-6 w-6"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                      aria-hidden="true"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                  </a>
-                </li>
-              </ul>
-            </div>
+            {TEAM_INFO.map((item: any, index: number) => {
+              return (
+                <div key={index} className="text-center text-gray-500">
+                  <Image
+                    className="mx-auto mb-4 h-36 w-36 rounded-full"
+                    src="/avatar.png"
+                    alt={item.name}
+                    width={100}
+                    height={100}
+                  />
+                  <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900">
+                    <a href="#">{item.name}</a>
+                  </h3>
+                  <p>{item.pos_title}</p>
+                  <ul className="mt-4 flex justify-center space-x-4">
+                    <li>
+                      <a
+                        href={item.fb_url}
+                        className="text-[#39569c] hover:text-gray-900"
+                      >
+                        <svg
+                          className="h-6 w-6"
+                          fill="currentColor"
+                          viewBox="0 0 24 24"
+                          aria-hidden="true"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>

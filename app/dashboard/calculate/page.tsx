@@ -1,24 +1,25 @@
 "use client";
 import { CalculationData, ResultType } from "@/app/lib/definitions";
 import { CalculateWater } from "@/app/lib/utils";
+import Popup from "@/app/ui/popup";
 import Result from "@/app/ui/result";
 import { ArrowPathIcon, RocketLaunchIcon } from "@heroicons/react/24/outline";
-import { useState } from "react"; 
+import { useEffect, useState } from "react"; 
 
 export default function Page() {
   const [result, setResult] = useState<ResultType | null>(null)
-
+  const [showPopup, setShowPopup] = useState<boolean>(true)
   const handleSubmitData = (data: FormData) => {
     setResult(CalculateWater(data))
-  } 
-
+  }
 
   return (
     <>
+      <Popup  modalOpen={showPopup} setModalOpen={setShowPopup}/>
       <section className="bg-white">
         <div className="mx-auto max-w-2xl px-4 py-8 lg:py-16">
           <h2 className="mb-4 text-2xl font-bold text-gray-900 text-center">
-            Water Quality Parameters
+            Water Quality Test
           </h2>
           <form action={handleSubmitData}>
             <div className="grid gap-4 sm:grid-cols-2 sm:gap-6">

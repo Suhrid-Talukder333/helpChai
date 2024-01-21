@@ -43,8 +43,11 @@ export type CarouselItem = {
 
 export type ResultType = {
   value: number;
-  desc: string;
+  desc: string[];
   img_url: string;
+  color: string;
+  result_index: string;
+  icon: string;
 }
 
 export type INDEX = "best" | "good" | "poor" | "worse" | "unfit"

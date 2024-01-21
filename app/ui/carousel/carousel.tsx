@@ -36,30 +36,32 @@ export default function Carousel({ items }: { items: CarouselItem[] }) {
   };
 
   return (
-    <div className="mx-auto h-full max-w-7xl text-center pt-8">
+    <div className="mx-auto max-w-7xl text-center pt-8">
       {/* Item image */}
-      <div className="transition-all h-full w-full delay-300 duration-150 ease-in-out imageContainer" >
-        <div className="relative flex flex-col p-1 h-full w-full border border-grey-400"  ref={itemsRef}>
+      <div className="transition-all w-full delay-300 duration-150 ease-in-out imageContainer" >
+        <div className="relative flex flex-col p-1 w-full"  ref={itemsRef}>
           {items.map((item, index) => (
             <Transition
-              className='h-full w-full'
+              className='w-full'
               key={index}
               show={active === index}
               enter="transition ease-in-out duration-500 delay-200 order-first"
-              enterFrom="opacity-0 scale-105"
+              enterFrom="opacity-0 scale-100"
               enterTo="opacity-100 scale-100"
-              leave="transition ease-in-out duration-300 absolute"
+              leave="transition ease-in-out duration-300 absolute hidden"
               leaveFrom="opacity-100 scale-100"
-              leaveTo="opacity-0 scale-95"
+              leaveTo="opacity-0 scale-100"
             >
-              <div className="relative flex h-full w-full min-h-[550px] rounded-md flex-col md:flex-row justify-center items-center">
-                <div className={`h-full w-full md:w-1/2 p-4 flex justify-center items-center`} style={{backgroundColor: index==1 ? item.color : ""}}>
+              <div className="relative flex border border-grey-400 w-full min-h-[550px] rounded-md flex-col md:flex-row justify-center items-center">
+                <div className={` w-full md:w-1/2 p-4 flex justify-center items-center`} style={{backgroundColor: index==1 ? item.color : ""}}>
                   <Image
                     className=""
                     src={item.img}
                     alt={item.desc}
                     width={500}
                     height={500}
+                    placeholder='blur'
+                    blurDataURL='https://placehold.co/600x400'
                   />
                 </div>
                 <div style={{borderColor: item.color}} className={`flex flex-col md:border-l-4 h-full w-full md:w-1/2 p-4 relative justify-center items-center`}>
@@ -94,7 +96,7 @@ export default function Carousel({ items }: { items: CarouselItem[] }) {
               }`}
             >
               <span className="relative mb-2 flex h-9 w-9 items-center justify-center rounded-full bg-indigo-100">
-                <DynamicHeroIcon icon={item.buttonIcon} />
+                <DynamicHeroIcon color="" className="" icon={item.buttonIcon} />
               </span>
               <span className="mb-2 block text-sm font-medium text-slate-900">
                 {item.desc}

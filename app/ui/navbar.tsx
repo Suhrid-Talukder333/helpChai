@@ -3,9 +3,9 @@ import Link from "next/link";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Logo from "./logo";
 import { useState } from "react"; 
+import { SparklesIcon } from "@heroicons/react/24/outline";
 
 const Navbar = () => {
-  const [nav, setNav] = useState(false);
   const links = [
     {
       id: 1,
@@ -33,57 +33,74 @@ const Navbar = () => {
       link: "/contact",
     },
   ];
+  const [open, setOpen] = useState(false);
 
   return (
-    <div className="flex justify-between items-center w-full h-20 px-4 text-white bg-white relative nav z-50">
-      <div>
-        {/* <h1 className="text-5xl font-signature ml-2"><a className="link-underline hover:transition ease-in-out delay-150 hover:underline hover:decoration-solid" href="">Logo</a></h1> */}
-        <h1 className="text-5xl font-signature ml-2">
-          <a
-            className="link-underline link-underline-black"
-            href=""
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Logo />
-          </a>
-        </h1>
+    <header className={`flex w-full items-center bg-gray-900`}>
+      <div className="w-full">
+        <div className="relative mx-4 flex items-center justify-center">
+          <div className="w-60 max-w-full px-4">
+            <Link href="/" className="block w-full py-5">
+              <Logo />
+            </Link>
+          </div>
+          <div className="flex w-full items-center justify-center px-4">
+            <div>
+              <button
+                onClick={() => setOpen(!open)}
+                id="navbarToggler"
+                className={` ${
+                  open && "navbarTogglerActive"
+                } absolute right-4 top-1/2 block -translate-y-1/2 rounded-lg px-3 py-[6px] ring-primary focus:ring-2 lg:hidden`}
+              >
+                <span className="relative my-[6px] block h-[2px] w-[30px] bg-white"></span>
+                <span className="relative my-[6px] block h-[2px] w-[30px] bg-white"></span>
+                <span className="relative my-[6px] block h-[2px] w-[30px] bg-white"></span>
+              </button>
+              <nav
+                style={{zIndex: 1000}}
+                id="navbarCollapse"
+                className={`absolute right-4 top-full w-full max-w-[250px] rounded-lg px-6 py-5 shadow bg-gray-600 lg:static lg:block lg:w-full lg:max-w-full lg:shadow-none lg:bg-transparent ${
+                  !open && "hidden"
+                } `}
+              >
+                <ul className="block lg:flex">
+                {links.map(({ id, link, name }) => (
+                  <ListItem key={id} NavLink={link}>{name}</ListItem>
+                ))}
+                </ul>
+              </nav>
+            </div>
+          </div>
+            <div className="hidden justify-center items-center sm:flex lg:pr-0">
+              <Link href="/dashboard/calculate"
+                className="bg-blue-700 focus:ring-2 hover:bg-cyan-500 inline-flex items-center rounded-lg px-5 py-2.5 text-center text-sm font-medium text-white focus:ring-4"
+              >
+              <SparklesIcon className="w-6" />
+              Calculate
+            </Link>
+            </div>
+        </div>
       </div>
-
-      <ul className="hidden md:flex">
-        {links.map(({ id, link, name }) => (
-          <li
-            key={id}
-            className="nav-links px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 hover:text-blue-300 duration-200 link-underline"
-          >
-            <Link href={link}>{name}</Link>
-          </li>
-        ))}
-      </ul>
-
-      <div
-        onClick={() => setNav(!nav)}
-        className="cursor-pointer pr-4 z-10 text-gray-500 md:hidden"
-      >
-        {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
-      </div>
-
-      {nav && (
-        <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black to-gray-800 text-gray-500">
-          {links.map(({ id, link, name }) => (
-            <li
-              key={id}
-              className="px-4 cursor-pointer capitalize py-6 text-4xl"
-            >
-              <Link onClick={() => setNav(!nav)} href={link}>
-                {name}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      )}
-    </div>
+    </header>
   );
 };
+
+
+const ListItem = ({ children, NavLink }: {children: any, NavLink: any}) => {
+  return (
+    <>
+      <li>
+        <a
+          href={NavLink}
+          className="flex py-2 text-base font-medium text-white hover:text-blue-300 lg:ml-12 lg:inline-flex"
+        >
+          {children}
+        </a>
+      </li>
+    </>
+  );
+};
+
 
 export default Navbar;

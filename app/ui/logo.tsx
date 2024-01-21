@@ -9,11 +9,11 @@ export default function Logo() {
       className={`${lusitana.className} relative flex flex-row items-center justify-center leading-none text-white`}
     >
       <Image
-        src={'/helppanilogotext.png'}
+        src={'/helpPaniLogo250.png'}
         alt={`Help Pani`}
         className="mr-4 rounded-full"
-        width={180}
-        height={180}
+        width={100}
+        height={60}
       />
     </div>
   );

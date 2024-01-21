@@ -3,11 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  html {
-    font-family: 'Poppins', sans-serif;
-  }
-}
 
 html {
   scroll-behavior: smooth;
@@ -28,20 +23,38 @@ input[type='number']::-webkit-outer-spin-button {
   margin: 0;
 }
 
+.navbarTogglerActive > span:nth-child(1) {
+  top: 7px;
+  --tw-rotate: 45deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.navbarTogglerActive > span:nth-child(2) {
+  opacity: 0;
+}
+
+.navbarTogglerActive > span:nth-child(3) {
+  top: -0.5rem;
+  --tw-rotate: 135deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
 
 .arrows {
-  width: 60px;
-  height: 72px;
+  width: 30px;
+  height: 36px;
   position: absolute;
+  /* top: 85vh; */
+  bottom: 10vh;
   left: 50%;
-  top: 80%;
-  margin-left: -30px;
-  bottom: 20px;
+  transform: translate(-50%, -50%);
 }
 
 @media only screen and (max-width: 768px) {
   .secondary-text {
     top: 80%;
+  }
+  .arrows {
+    bottom: 25vh;
   }
 }
 
@@ -55,31 +68,27 @@ input[type='number']::-webkit-outer-spin-button {
 
 @keyframes arrow
 {
-0% {opacity:0}
-40% {opacity:1}
-80% {opacity:0}
-100% {opacity:0}
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 @-webkit-keyframes arrow /*Safari and Chrome*/
 {
-0% {opacity:0}
-40% {opacity:1}
-80% {opacity:0}
-100% {opacity:0}
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
-.arrows path.a1 {
-  animation-delay:-1s;
-  -webkit-animation-delay:-1s; /* Safari 和 Chrome */
-}
-
-.arrows path.a2 {
-  animation-delay:-0.5s;
-  -webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
-}
-
-.arrows path.a3 { 
-  animation-delay:0s;
-  -webkit-animation-delay:0s; /* Safari 和 Chrome */
-}
