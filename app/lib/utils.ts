@@ -159,11 +159,11 @@ const get_result_index = (result: number) => {
 }
 
 export const RESULT_DESC = {
-  "excellent": ["Ideal for drinking.", "Highest quality, meets or exceeds all safety standards."],
-  "good": ["Suitable for daily use.","Healthy and safe with minimal impurities."],
-  "poor": ["Consider additional purification.","Caution advised due to noticeable impurities."],
-  "verypoor": ["Avoid direct consumption.","Significant contamination."],
-  "unfit": ["Poses serious health risks.", "Dangerously contaminated; Avoid for drinking or cooking without thorough purification."]
+  "excellent": ["Ideal for drinking", "Highest quality, meets or exceeds all safety standards."],
+  "good": ["Suitable for daily use","Healthy and safe, minimal impurities."],
+  "poor": ["Consider additional purification","Caution advised due to noticeable impurities."],
+  "verypoor": ["Avoid direct consumption","Significant contamination."],
+  "unfit": ["Serious health risks", "Dangerously contaminated Avoid for drinking or cooking without thorough purification."]
 }
 
 export const RESULT_COLOR= {

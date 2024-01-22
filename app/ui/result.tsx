@@ -23,7 +23,7 @@ export default function TypeResultType({ result, standard }: { result: ResultTyp
         <p className="mb-3 text-1xl md:text-2xl font-bold text-center">
           {result.desc[0]}
         </p>
-        <p style={{ textAlignLast: "center" }} className="mb-3 text-base text-justify font-bold text-center text-gray-700">
+        <p style={{ textAlignLast: "center" }} className="mb-3 text-base font-bold text-center text-gray-700">
           {result.desc[1]}
         </p>
       </div>
