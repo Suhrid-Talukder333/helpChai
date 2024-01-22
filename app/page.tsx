@@ -113,7 +113,7 @@ export default function Page() {
                 </defs>
               </svg>
             </a>
-            <a href="/https://www.swedenabroad.se/en/embassies/bangladesh-dhaka/" target="_blank" className="flex items-center justify-center">
+            <a href="https://www.swedenabroad.se/en/embassies/bangladesh-dhaka/" target="_blank" className="flex items-center justify-center">
               <Image
                 src="/ebssaySwedendhaka.png"
                 width={200}
