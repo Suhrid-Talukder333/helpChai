@@ -50,4 +50,4 @@ export type ResultType = {
   icon: string;
 }
 
-export type INDEX = "best" | "good" | "poor" | "worse" | "unfit"
+export type INDEX = "excellent" | "good" | "poor" | "verypoor" | "unfit"

@@ -1,16 +1,18 @@
 "use client";
 import { CalculationData, ResultType } from "@/app/lib/definitions";
-import { CalculateWater } from "@/app/lib/utils";
+import { CalculateWaterWHO, CalculateWaterBD } from "@/app/lib/utils";
 import Popup from "@/app/ui/popup";
 import Result from "@/app/ui/result";
 import { ArrowPathIcon, RocketLaunchIcon } from "@heroicons/react/24/outline";
 import { useEffect, useState } from "react"; 
 
 export default function Page() {
-  const [result, setResult] = useState<ResultType | null>(null)
+  const [whoResult, setWhoResult] = useState<ResultType | null>(null)
+  const [bdResult, setBdResult] = useState<ResultType | null>(null)
   const [showPopup, setShowPopup] = useState<boolean>(true)
   const handleSubmitData = (data: FormData) => {
-    setResult(CalculateWater(data))
+    setWhoResult(CalculateWaterWHO(data))
+    setBdResult(CalculateWaterBD(data))
   }
 
   return (
@@ -57,7 +59,7 @@ export default function Page() {
                   required={true}
                 />
               </div>
-              <div className="w-full">
+              {/* <div className="w-full">
                 <label
                   htmlFor="turb"
                   className="mb-2 block text-sm font-medium text-gray-900"
@@ -73,8 +75,8 @@ export default function Page() {
                   placeholder="Type Turbidity value"
                   required={true}
                 />
-              </div>
-              <div>
+              </div> */}
+              {/* <div>
                 <label
                   htmlFor="alk"
                   className="mb-2 block text-sm font-medium text-gray-900"
@@ -90,7 +92,7 @@ export default function Page() {
                   placeholder="Type Alkalinity value"
                   required={true}
                 />
-              </div>
+              </div> */}
               <div>
                 <label
                   htmlFor="tds"
@@ -142,7 +144,7 @@ export default function Page() {
                   required={true}
                 />
               </div> */}
-              <div className="w-full">
+              {/* <div className="w-full">
                 <label
                   htmlFor="na"
                   className="mb-2 block text-sm font-medium text-gray-900"
@@ -158,7 +160,7 @@ export default function Page() {
                   placeholder="Type Na+ value"
                   required={true}
                 />
-              </div>
+              </div> */}
               <div className="sm:col-span-2">
                 <label
                   htmlFor="th"
@@ -243,7 +245,7 @@ export default function Page() {
                   placeholder="Type DO value"
                   required={true}
                 />
-              </div>
+              </div> */}
               <div className="sm:col-span-2">
                 <label
                   htmlFor="fe"
@@ -260,7 +262,24 @@ export default function Page() {
                   placeholder="Type Fe value"
                   required={true}
                 />
-              </div> */}
+              </div>
+              <div className="sm:col-span-2">
+                <label
+                  htmlFor="arsenic"
+                  className="mb-2 block text-sm font-medium text-gray-900"
+                >
+                  Arsenic
+                </label>
+                <input
+                  type="number"
+                  step="any"
+                  name="arsenic"
+                  id="arsenic"
+                  className="focus:ring-2 focus:border-green-200 block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900"
+                  placeholder="Type Arsenic value"
+                  required={true}
+                />
+              </div>
             </div>
             <button
               type="submit"
@@ -270,7 +289,7 @@ export default function Page() {
               Calculate
             </button>
             <button
-              onClick={() => setResult(null)}
+              onClick={() => {setWhoResult(null); setBdResult(null)}}
               type="reset"
               className="bg-red-700 focus:ring-2 hover:bg-cyan-500 mt-4 ml-4 inline-flex items-center rounded-lg px-5 py-2.5 text-center text-sm font-medium text-white focus:ring-4 sm:mt-6"
             >
@@ -280,8 +299,9 @@ export default function Page() {
           </form>
         </div>
       </section>
-      <section className="flex justify-center align-center my-1">
-        {result && <Result result={result}/>}
+      <section className="flex flex-col md:flex-row justify-center align-center my-1">
+        {whoResult && <Result result={whoResult} standard={"WHO"}/>}
+        {bdResult && <Result result={bdResult} standard={"BD"}/>}
       </section>
     </>
   );

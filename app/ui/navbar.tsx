@@ -24,7 +24,7 @@ const Navbar = () => {
     },
     {
       id: 4,
-      name: "Calculate WIQ",
+      name: "Calculate WQI",
       link: "/dashboard/calculate",
     },
     {
