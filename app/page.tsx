@@ -172,7 +172,7 @@ export default function Page() {
           </div>
           <div className="mt-4 md:mt-0 order-first" >
             <h2 className="mb-4 break-all text-center md:text-start md:text-justify text-2xl md:text-4xl text-center font-extrabold tracking-tight text-gray-900 ">
-            Youth-led Water Security and <br/>Climate Resilience in <br/>Hatiya Island, Noakhali
+            Youth-led Water Security<br/> and <br/>Climate Resilience in <br/>Hatiya Island, Noakhali
             </h2>
           </div>
         </div>
