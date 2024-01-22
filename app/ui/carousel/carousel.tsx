@@ -36,36 +36,36 @@ export default function Carousel({ items }: { items: CarouselItem[] }) {
   };
 
   return (
-    <div className="mx-auto max-w-7xl text-center pt-8">
+    <div className="mx-auto max-w-7xl text-center pt-8 min-h-[550px] md:min-w-[600px]">
       {/* Item image */}
-      <div className="transition-all w-full delay-300 duration-150 ease-in-out imageContainer" >
-        <div className="relative flex flex-col p-1 w-full"  ref={itemsRef}>
+      <div className="transition-all md:min-w-[600px] min-h-[550px] w-full delay-300 duration-150 ease-in-out" >
+        <div className="relative min-h-[550px] flex flex-col p-1 w-full md:min-w-[600px]"  ref={itemsRef}>
           {items.map((item, index) => (
             <Transition
-              className='w-full'
+              className='w-full md:min-w-[600px] min-h-[550px]'
               key={index}
               show={active === index}
               enter="transition ease-in-out duration-500 delay-200 order-first"
               enterFrom="opacity-0 scale-100"
               enterTo="opacity-100 scale-100"
-              leave="transition ease-in-out duration-300 absolute hidden"
+              leave="transition ease-in-out duration-300 relative hidden"
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-100"
             >
-              <div className="relative flex border border-grey-400 w-full min-h-[550px] rounded-md flex-col md:flex-row justify-center items-center">
-                <div className={` w-full md:w-1/2 p-4 flex justify-center items-center`} style={{backgroundColor: index==1 ? item.color : ""}}>
+              <div className="relative flex w-full min-h-[550px] md:min-w-[600px] rounded-md flex-col md:flex-col justify-center items-center">
+                <div className={` w-full md:min-w-[600px] p-4 flex justify-center items-center`}>
                   <Image
                     className=""
                     src={item.img}
                     alt={item.desc}
-                    width={500}
-                    height={500}
+                    width={300}
+                    height={300}
                     placeholder='blur'
                     blurDataURL='https://placehold.co/600x400'
                   />
                 </div>
-                <div style={{borderColor: item.color}} className={`flex flex-col md:border-l-4 h-full w-full md:w-1/2 p-4 relative justify-center items-center`}>
-                  <p className='w-full p-2 text-wrap text-1xl md:text-4xl font-bold ' >
+                <div style={{borderColor: item.color}} className={`flex flex-col md:border-l-4 h-full w-full md:min-w-[600px] p-4 relative justify-center items-center`}>
+                  <p className='w-full p-2 text-wrap text-base md:text-1xl font-bold ' >
                     {item.text}
                   </p>
                   <p className='w-full p-2 text-wrap text-center text-sm italic text-slate-800' >
@@ -78,9 +78,9 @@ export default function Carousel({ items }: { items: CarouselItem[] }) {
         </div>
       </div>
       {/* Buttons */}
-      <div className="mx-auto mt-8 grid max-w-xs grid-cols-2 gap-4 sm:max-w-sm md:max-w-3xl md:grid-cols-4">
+      <div className="mx-auto mt-8 grid max-w-xs grid-cols-2 md:min-w-[600px] gap-4 sm:max-w-sm md:max-w-3xl md:grid-cols-4">
         {items.map((item, index) => (
-          <button
+          <span
             key={index}
             className="group rounded p-2 focus:outline-none focus-visible:ring focus-visible:ring-indigo-300"
             onClick={() => {
@@ -92,7 +92,7 @@ export default function Carousel({ items }: { items: CarouselItem[] }) {
               className={`flex flex-col items-center text-center ${
                 active === index
                   ? ''
-                  : 'opacity-50 transition-opacity group-hover:opacity-100 group-focus:opacity-100'
+                  : 'opacity-50 transition-opacity group-hover:opacity-100  group-focus:opacity-100'
               }`}
             >
               <span className="relative mb-2 flex h-9 w-9 items-center justify-center rounded-full bg-indigo-100">
@@ -112,7 +112,7 @@ export default function Carousel({ items }: { items: CarouselItem[] }) {
                 ></span>
               </span>
             </span>
-          </button>
+          </span>
         ))}
       </div>
     </div>

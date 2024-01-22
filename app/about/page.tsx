@@ -3,6 +3,8 @@
 import Image from 'next/image';
 import React from 'react';
 import { TEAM_INFO } from '../lib/utils';
+import Link from 'next/link';
+import { CheckBadgeIcon } from '@heroicons/react/24/outline';
 
 const Page = () => {
   return (
@@ -645,26 +647,321 @@ const Page = () => {
 
             <div className="w-full px-4 lg:w-1/2 xl:w-5/12">
               <div className="mt-10 p-5  lg:mt-0">
-                <span className="mb-4 block text-center text-3xl font-extrabold tracking-tight text-gray-900 md:text-start md:text-5xl">
-                  About Us
+                <span className="mb-4 block rounded border-2 border-blue-800 p-4 text-center text-3xl font-extrabold tracking-tight text-gray-900 md:text-5xl">
+                  About{' '}
+                  <strong className="text-bold text-green-300">Help</strong>
+                  <strong className="text-bold text-blue-300">Chai</strong>
                 </span>
                 <h2 className="text-1xl text-dark mb-5 text-center font-bold text-gray-700 sm:text-[40px]/[48px] md:text-start md:text-3xl">
-                  Empower communities with safe water solutions.
+                  Empowering Communities for Climate Resilience and Water Purity
                 </h2>
-                <p className="mb-5 text-center text-justify text-base sm:text-xl md:text-start">
-                  Discover Help Pani, dedicated to shaping a digital water
-                  future. Our Young Water Volunteers in Water Clubs are crucial
-                  contributors. Join our journey, iterating through
-                  collaboration on the Help Pani website.
-                </p>
-                <p className="mb-8 text-center text-justify text-base sm:text-xl md:text-start">
-                  Our platform is crafted for gathering, storing, and sharing
-                  data on drinking water supply and quality, aligning with
-                  ongoing doctoral research led by ICCAD. We integrate
-                  technology, social engagement, and institutional support to
-                  enhance Drinking Water Security
-                </p>
+                {/* <p className="mb-5 text-center text-justify text-base sm:text-xl md:text-start">
+                  Welcome to our ongoing research project
+                  <br />{' '}
+                  <strong className="font-bold">
+                    Capacity Building of Youth to Improve Drinking Water
+                    Security and Climate Resilience through Youth-led
+                    Participatory Sensing (YPS) Model in Hatiya Island,
+                    Noakhali.
+                  </strong>
+                </p> */}
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="bg-white">
+        <div className="mx-auto flex max-w-screen-xl flex-col items-center justify-center px-4 py-8 sm:py-16 lg:px-6">
+          <div className="mb-4 max-w-screen-xl text-center lg:mb-16">
+            <h2 className="mb-4 text-2xl md:text-3xl font-extrabold tracking-tight text-gray-900">
+              Capacity Building of Youth to Improve Drinking Water Security and
+              Climate Resilience through Youth-led Participatory Sensing (YPS)
+              Model in Hatiya Island, Noakhali.
+            </h2>
+            <p className="text-gray-500 sm:text-xl"></p>
+          </div>
+        </div>
+      </section>
+      <section className="bg-white">
+        <div className="mx-auto max-w-screen-xl px-4 py-8 sm:py-16 lg:px-6">
+          <div className="flex w-full flex-col items-center justify-center">
+            <Image
+              className="w-[300px]"
+              src="/images/planet.jpg"
+              alt="EC"
+              width={585}
+              height={420}
+            />
+            <Link
+              href="https://www.vecteezy.com/vector-art/2452805-globe-map-world"
+              className="text-grey-400 text-center text-base"
+            >
+              Globe map world Free Vector, Author Giuseppe Ramos
+            </Link>
+          </div>
+          <div className="mx-auto max-w-screen-sm text-center">
+            <h2 className="mt-8 mb-4 text-2xl font-extrabold leading-tight tracking-tight text-gray-900 md:text-4xl">
+              The Global Water Challenge
+            </h2>
+            <p className="mb-6 text-justify font-light text-gray-500 md:text-lg">
+              Water, vital for civilization and ecosystems, constitutes 71% of
+              the world, with only 2.5% as freshwater. Climate change,
+              disasters, and extreme events challenge our existence. Globally,
+              water security faces a crucial need for quantity and quality. IPCC
+              warns 25% may face water scarcity by 2050. In the southwest
+              coastal zone of Bangladesh, freshwater river area is projected to
+              decrease from 40.8% to 17.1% between 2012 and 2050
+            </p>
+          </div>
+        </div>
+      </section>
+      <section className="bg-white">
+        <div className="mx-auto max-w-screen-xl items-center gap-8 px-4 py-8 sm:py-16 md:grid md:grid-cols-2 lg:px-6 xl:gap-16">
+          <div className="flex w-full flex-col items-center justify-center">
+            <Image
+              className="w-full"
+              src="/images/bdmap.png"
+              alt="EC"
+              width={585}
+              height={420}
+            />
+            <Link
+              href="https://freevectormaps.com/bangladesh/BD-EPS-02-4001?ref=atr"
+              className="text-grey-400 text-center text-base"
+            >
+              Vector Flag of Bangladesh
+            </Link>
+          </div>
+          <div className="mt-4 md:mt-0">
+            <h2 className="mb-4 text-center text-2xl font-extrabold tracking-tight text-gray-900 md:text-end md:text-4xl ">
+              Bangladesh&lsquo;s Water Reality
+            </h2>
+            <p className="mb-6 text-justify font-light text-gray-500  md:text-lg">
+              Bangladesh grapples with safe freshwater scarcity, causing a high
+              waterborne disease rate. The government addresses climate change
+              impacts by investing in nature-based solutions, enhancing
+              watersheds, and improving waterways for groundwater recharge. In
+              2018, 50 million people faced arsenic exposure from contaminated
+              tube well water.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section className="bg-white">
+        <div className="mx-auto max-w-screen-xl items-center gap-8 px-4 py-8 sm:py-16 md:grid md:grid-cols-2 lg:px-6 xl:gap-16">
+          <div className="order-last flex w-full flex-col items-center justify-center">
+            <Image
+              className="w-full"
+              src="/images/global_warming.jpg"
+              alt="EC"
+              width={585}
+              height={420}
+            />
+            <Link
+              href="https://www.vecteezy.com/vector-art/11455662-climate-change-industry"
+              className="text-grey-400 text-center text-base"
+            >
+              Vector of Global Warming, Author Jheny Neriza Amanda
+            </Link>
+          </div>
+          <div className="mt-4 md:mt-0">
+            <h2 className="mb-4 text-center text-2xl font-extrabold tracking-tight text-gray-900 md:text-end md:text-4xl ">
+              Impact of Climate Change
+            </h2>
+            <p className="mb-6 text-justify font-light text-gray-500 md:text-lg">
+              Ensuring sustainable safe drinking-water faces risk without
+              resilient water supply systems. Climate change&lsquo;s impact on
+              weather events, such as floods or droughts, stresses freshwater
+              resources, jeopardizing water safety and security. To address
+              these challenges, enhancing the climate resilience of water supply
+              services is crucial in the face of anticipated climate change
+              impacts (WHO, 2017)
+            </p>
+          </div>
+        </div>
+      </section>
+      <section className="bg-white">
+        <div className="mx-auto max-w-screen-xl px-4 py-8 sm:py-16 lg:px-6">
+          <div className="flex w-full flex-col items-center justify-center">
+            <Image
+              className="w-[600px]"
+              src="/images/goal.png"
+              alt="EC"
+              width={585}
+              height={420}
+            />
+          </div>
+          <div className="mx-auto max-w-screen-sm text-center">
+            <h2 className="mb-4 text-2xl font-extrabold leading-tight tracking-tight text-gray-900 md:text-4xl">
+              Goal And Objective
+            </h2>
+          </div>
+          <div className="grid border-t border-gray-200 pt-8 text-left md:grid-cols-2 md:gap-16">
+            <div>
+              <div className="mb-10">
+                <h3 className="mb-4 flex flex-col items-center text-lg font-medium text-gray-900">
+                  <CheckBadgeIcon className="h-14 w-14" />
+                  Prioritize water quality alongside quantity in developing
+                  countries for enhanced public health.
+                </h3>
+              </div>
+              <div className="mb-10">
+                <h3 className="mb-4 flex flex-col items-center text-lg font-medium text-gray-900">
+                  <CheckBadgeIcon className="h-14 w-14" />
+                  Overcome the challenge of insufficient data on water supply
+                  and quality, enabling effective analysis and action.
+                </h3>
+              </div>
+              <div className="mb-10">
+                <h3 className="mb-4 flex flex-col items-center text-lg font-medium text-gray-900">
+                  <CheckBadgeIcon className="h-14 w-14" />
+                  Bridge communication gaps among water supply entities,
+                  communities, and decision-makers.
+                </h3>
+              </div>
+            </div>
+            <div>
+              <div className="mb-10">
+                <h3 className="mb-4 flex flex-col items-center text-lg font-medium text-gray-900">
+                  <CheckBadgeIcon className="h-14 w-14" />
+                  Provide vital information to youth on water supply, quality,
+                  sanitation, hygiene, and the climate crisis.
+                </h3>
+              </div>
+              <div className="mb-10">
+                <h3 className="mb-4 flex flex-col items-center text-lg font-medium text-gray-900">
+                  <CheckBadgeIcon className="h-14 w-14" />
+                  Address knowledge gaps during critical situations like
+                  pandemics through evidence-informed decision-making.
+                </h3>
+              </div>
+              <div className="mb-10">
+                <h3 className="mb-4 flex flex-col items-center text-lg font-medium text-gray-900">
+                  <CheckBadgeIcon className="h-14 w-14" />
+                  Scale and advance tools through the &lsquo;HelpChai&lsquo; app
+                  and website to tackle water supply and quality monitoring
+                  challenges.
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="bg-white">
+        <div className="mx-auto max-w-screen-xl items-center gap-8 px-4 py-8 sm:py-16 md:grid md:grid-cols-2 lg:px-6 xl:gap-16">
+          <div className="order-last flex w-full flex-col items-center justify-center">
+            <svg
+              className="text-primary-600 h-40 w-40 lg:h-80 lg:w-80 "
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fillRule="evenodd"
+                d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 0l-2 2a1 1 0 101.414 1.414L8 10.414l1.293 1.293a1 1 0 001.414 0l4-4z"
+                clipRule="evenodd"
+              ></path>
+            </svg>
+          </div>
+          <div className="mt-4 md:mt-0">
+            <h2 className="mb-4 text-center text-2xl font-extrabold tracking-tight text-gray-900 md:text-end md:text-4xl ">
+              Expected Results
+            </h2>
+            <p className="mb-6 text-justify font-light text-gray-500 md:text-lg">
+              This research leverages ICTs to bridge communication gaps on water
+              supply and quality, benefiting local to national stakeholders.
+              Developing countries face challenges in effectively communicating
+              drinking water quality data for timely decision-making. By
+              empowering youth (high school to university level) in
+              understanding and utilizing ICTs for water supply and quality
+              monitoring, we aim to ensure sustainable development in the
+              sector, fostering &lsquo;Drinking Water Security&lsquo; and paving
+              the way for future innovations and technologies
+            </p>
+            <p className="ribbon">
+              <span className="text">
+                <strong className="bold">#climatechange </strong>
+              </span>
+            </p>
+            <p className="ribbon">
+              <span className="text">
+                <strong className="bold">#youthaction</strong>
+              </span>
+            </p>
+            <p className="ribbon">
+              <span className="text">
+                <strong className="bold">#SDGs</strong>
+              </span>
+            </p>
+            <p className="ribbon">
+              <span className="text">
+                <strong className="bold">#SustainableFuture</strong>
+              </span>
+            </p>
+          </div>
+        </div>
+      </section>
+      <section className="bg-white">
+        <div className="mx-auto flex max-w-screen-xl flex-col items-center justify-center px-4 py-8 sm:py-16 lg:px-6">
+          <div className="mb-8 max-w-screen-md text-center lg:mb-16">
+            <h2 className="mb-4 text-4xl font-extrabold tracking-tight text-gray-900">
+              In The End
+            </h2>
+          </div>
+          <div className="space-y-8 md:grid md:grid-cols-2 md:gap-12 md:space-y-0 lg:grid-cols-3">
+            <div className="flex flex-col items-center justify-center">
+              <div className="bg-primary-100 mb-4 flex h-10 w-10 items-center justify-center rounded-full lg:h-12 lg:w-12">
+                <svg
+                  className="text-primary-600 h-5 w-5 lg:h-6 lg:w-6 "
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 0l-2 2a1 1 0 101.414 1.414L8 10.414l1.293 1.293a1 1 0 001.414 0l4-4z"
+                    clipRule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+              <h3 className="mb-2 text-xl font-bold">Empowering Volunteers</h3>
+              <p className="text-gray-500">
+                Our volunteers are provided with adequate training and tools for
+                field activities including climate hazard analysis, data
+                collection, reporting and dissemination.
+              </p>
+            </div>
+            <div className="flex flex-col items-center justify-center">
+              <div className="bg-primary-100 mb-4 flex h-10 w-10 items-center justify-center rounded-full lg:h-12 lg:w-12">
+              <svg className="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"></path></svg>
+              </div>
+              <h3 className="mb-2 text-xl font-bold">Building Capacity</h3>
+              <p className="text-gray-500">
+                Volunteer and selected schools can support as resource center
+                for the expansion of the concept and replication.
+              </p>
+            </div>
+            <div className="flex flex-col items-center justify-center">
+              <div className="bg-primary-100 mb-4 flex h-10 w-10 items-center justify-center rounded-full lg:h-12 lg:w-12">
+                <svg
+                  className="text-primary-600 dark:text-primary-300 h-5 w-5 lg:h-6 lg:w-6"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z"
+                    clipRule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+              <h3 className="mb-2 text-xl font-bold">Climate-Ready Innovations</h3>
+              <p className="text-gray-500">
+                Relevant features regarding climate resilient actions will be
+                incorporated in both HelpChai app and website for systematic
+                data management portal.
+              </p>
             </div>
           </div>
         </div>
@@ -673,17 +970,16 @@ const Page = () => {
         <div className="mx-auto max-w-screen-xl px-4 py-8 text-center lg:px-6 lg:py-16">
           <div className="mx-auto mb-8 max-w-screen-sm lg:mb-16">
             <h2 className="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 md:text-4xl">
-              Our team
+              The Team
             </h2>
             <p
               style={{ textAlignLast: 'center' }}
               className="text-justify font-light text-gray-500 sm:text-xl"
             >
-              Embark on a journey through our diverse range of dedicated persons
-              in promoting safe water drinking practices.
+              Our diverse range of dedicated persons.
             </p>
           </div>
-          <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-16">
+          <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 lg:gap-16">
             {TEAM_INFO.map((item: any, index: number) => {
               return (
                 <div key={index} className="text-center text-gray-500">

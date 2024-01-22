@@ -39,23 +39,53 @@ export const carouselItems = [
 
 export const TEAM_INFO = [
   {
-    name: "Name",
-    pos_title: "Research Intern",
+    name: "Md. Saiful Islam",
+    pos_title: "Project Coordinator",
     fb_url: "https://facebook.com"
   },
   {
-    name: "Name",
-    pos_title: "Research Intern",
+    name: "Najmus Sakib Khan",
+    pos_title: "Advisor",
     fb_url: "https://facebook.com"
   },
   {
-    name: "Name",
-    pos_title: "Research Intern",
+    name: "Jaber Bin Abdul Bari",
+    pos_title: "Research Assistant",
     fb_url: "https://facebook.com"
   },
   {
-    name: "Name",
-    pos_title: "Research Intern",
+    name: "Sanjida Nisa",
+    pos_title: "Research Assistant",
+    fb_url: "https://facebook.com"
+  },
+  {
+    name: "Md. Fizul Islam",
+    pos_title: "Research Assistant",
+    fb_url: "https://facebook.com"
+  },
+  {
+    name: "Md. Shiblu",
+    pos_title: "Research Assistant",
+    fb_url: "https://facebook.com"
+  },
+  {
+    name: "Sunanda Dewan",
+    pos_title: "Research Assistant",
+    fb_url: "https://facebook.com"
+  },
+  {
+    name: "Md. Maeen Uddin",
+    pos_title: "Research Assistant",
+    fb_url: "https://facebook.com"
+  },
+  {
+    name: "Khadija Akter Riya",
+    pos_title: "Research Assistant",
+    fb_url: "https://facebook.com"
+  },
+  {
+    name: "Suhrid Talukder",
+    pos_title: "Research Assistant",
     fb_url: "https://facebook.com"
   }
 ]
