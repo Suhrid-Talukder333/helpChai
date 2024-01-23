@@ -12,20 +12,20 @@ export const carouselItems = [
     ref: "Image by stockgiu on Freepik"
   },
   {
-    img: "/images/carousel2.jpeg",
-    desc: 'Filtering',
-    buttonIcon: "FunnelIcon",
-    text: "Use a reliable water filter to remove impurities and contaminants",
-    color: "#1dcece",
-    ref: "Image by macrovector on Freepik"
-  },
-  {
     img: "/images/carousel3.jpeg",
     desc: 'Boiling',
     buttonIcon: "BeakerIcon",
     text: "Boiling water is a simple yet effective method.",
     color: "#f09d44",
     ref: "Image by brgfx on Freepik"
+  },
+  {
+    img: "/images/carousel2.jpeg",
+    desc: 'Filtering',
+    buttonIcon: "FunnelIcon",
+    text: "Use a reliable water filter to remove impurities and contaminants",
+    color: "#1dcece",
+    ref: "Image by macrovector on Freepik"
   },
   {
     img: "/images/carousel4.jpeg",
