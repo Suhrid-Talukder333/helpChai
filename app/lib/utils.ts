@@ -54,6 +54,16 @@ export const TEAM_INFO = [
     fb_url: "https://facebook.com"
   },
   {
+    name: "Suhrid Talukder",
+    pos_title: "Research Assistant",
+    fb_url: "https://facebook.com"
+  },
+  {
+    name: "Kawshik Ahmed",
+    pos_title: "Research Assistant",
+    fb_url: "https://facebook.com"
+  },
+  {
     name: "Sanjida Nisa",
     pos_title: "Research Assistant",
     fb_url: "https://facebook.com"
@@ -83,11 +93,6 @@ export const TEAM_INFO = [
     pos_title: "Research Assistant",
     fb_url: "https://facebook.com"
   },
-  {
-    name: "Suhrid Talukder",
-    pos_title: "Research Assistant",
-    fb_url: "https://facebook.com"
-  }
 ]
 
 const BIS_STANDARD_VALUES_WHO = {
