@@ -39,16 +39,6 @@ export const carouselItems = [
 
 export const TEAM_INFO = [
   {
-    name: "Md. Saiful Islam",
-    pos_title: "Project Coordinator",
-    fb_url: "https://facebook.com"
-  },
-  {
-    name: "Najmus Sakib Khan",
-    pos_title: "Advisor",
-    fb_url: "https://facebook.com"
-  },
-  {
     name: "Jaber Bin Abdul Bari",
     pos_title: "Research Assistant",
     fb_url: "https://facebook.com"
@@ -93,6 +83,19 @@ export const TEAM_INFO = [
     pos_title: "Research Assistant",
     fb_url: "https://facebook.com"
   },
+]
+
+export const TEAM_LEADER_INFO = [
+  {
+    name: "Md. Saiful Islam",
+    pos_title: "Project Coordinator",
+    fb_url: "https://facebook.com"
+  },
+  {
+    name: "Najmus Sakib Khan",
+    pos_title: "Advisor",
+    fb_url: "https://facebook.com"
+  }
 ]
 
 const BIS_STANDARD_VALUES_WHO = {
