@@ -194,7 +194,7 @@ export const RESULT_IMG_URL = {
   "excellent": "/images/bestLevelWater.jpg",
   "good": "/images/goodLevelWater.jpg",
   "poor": "/images/poorLevelWater.jpg",
-  "verypoor": "/images/verypoorLevelWater.jpg",
+  "verypoor": "/images/worseLevelWater.jpg",
   "unfit": "/images/unfitLevelWater.png"
 }
 
