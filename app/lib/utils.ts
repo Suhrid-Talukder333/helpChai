@@ -48,23 +48,28 @@ export const TEAM_INFO = [
     pos_title: "Research Assistant",
     fb_url: "https://facebook.com"
   },
+  // {
+  //   name: "Kawshik Ahmed",
+  //   pos_title: "Research Assistant",
+  //   fb_url: "https://facebook.com"
+  // },
   {
-    name: "Kawshik Ahmed",
+    name: "Sanjida Akter Nisa",
+    pos_title: "Research Assistant",
+    fb_url: "https://facebook.com"
+  },
+  // {
+  //   name: "Md. Fizul Islam",
+  //   pos_title: "Research Assistant",
+  //   fb_url: "https://facebook.com"
+  // },
+  {
+    name: "Khadija Akter Riya",
     pos_title: "Research Assistant",
     fb_url: "https://facebook.com"
   },
   {
-    name: "Sanjida Nisa",
-    pos_title: "Research Assistant",
-    fb_url: "https://facebook.com"
-  },
-  {
-    name: "Md. Fizul Islam",
-    pos_title: "Research Assistant",
-    fb_url: "https://facebook.com"
-  },
-  {
-    name: "Md. Shiblu",
+    name: "Abdus Salam Shiblu",
     pos_title: "Research Assistant",
     fb_url: "https://facebook.com"
   },
@@ -75,12 +80,42 @@ export const TEAM_INFO = [
   },
   {
     name: "Md. Maeen Uddin",
-    pos_title: "Research Assistant",
+    pos_title: "Research Intern",
     fb_url: "https://facebook.com"
   },
   {
-    name: "Khadija Akter Riya",
-    pos_title: "Research Assistant",
+    name: "Fatematunnesha Payel",
+    pos_title: "Research Intern",
+    fb_url: "https://facebook.com"
+  },
+  {
+    name: "Saira Sadia",
+    pos_title: "Research Intern",
+    fb_url: "https://facebook.com"
+  },
+  {
+    name: "Md. Saiful Islam",
+    pos_title: "Volunteer",
+    fb_url: "https://facebook.com"
+  },
+  {
+    name: "Muhammad Jamil Uddin",
+    pos_title: "Volunteer",
+    fb_url: "https://facebook.com"
+  },
+  {
+    name: "Md. Tanbir Mohiuddin",
+    pos_title: "Volunteer",
+    fb_url: "https://facebook.com"
+  },
+  {
+    name: "Abdul Ohab",
+    pos_title: "Volunteer",
+    fb_url: "https://facebook.com"
+  },
+  {
+    name: "Savatul Mahi",
+    pos_title: "Volunteer",
     fb_url: "https://facebook.com"
   },
 ]
